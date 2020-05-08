@@ -1,0 +1,5 @@
+The FileReader.readAsArrayBuffer function can return multiple references to the same ArrayBuffer object, which can be freed and overwritten with sprayed objects. The dangling ArrayBuffer reference can be used to access the sprayed objects, allowing arbitrary memory access from Javascript. This is used to write and execute shellcode in a WebAssembly object.
+
+The shellcode is executed within the Chrome sandbox, so you must explicitly disable the sandbox for the payload to be successful, e.g:
+
+C:\Program Files\Google\Chrome\Application>chrome.exe --no-sandbox
