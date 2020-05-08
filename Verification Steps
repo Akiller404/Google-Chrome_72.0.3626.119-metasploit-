@@ -1,0 +1,4 @@
+Start msfconsole
+Do: use exploit/windows/browser/chrome_filereader_uaf
+Do: Choose a payload and set any specific options
+Do: run, after a target browses to the generated URL, you should receive a session.
